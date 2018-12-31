@@ -21,23 +21,33 @@ console.log("Mary's average score is " + avgScoreMary);
 
 
 if(avgScoreJohn > avgScoreMike) {
-    console.log("John has a higher averageg score than Mike.");
+    console.log("John has a higher average score than Mike with " + avgScoreJohn + ".");
 }
-else{
-    console.log("Mike has a higher average score than John.");
+else if (avgScoreJohn < avgScoreMike) {
+    console.log("Mike has a higher average score than John with " + avgScoreMike + ".");
+}
+else if (avgScoreJohn == avgScoreMike) {
+    console.log("Draw.");
 }
 
+
 if(avgScoreMary > avgScoreMike) {
-    console.log("Mary has a higher average score than Mike.");
+    console.log("Mary has a higher average score than Mike with " + avgScoreMary + ".");
 }
-else{
-    console.log("Mike has a higher average score than Mary.");
+else if (avgScoreMary < avgScoreMike){
+    console.log("Mike has a higher average score than Mary with " + avgScoreMike + ".");
+}
+else if (avgScoreMary == avgScoreMike) {
+    console.log("Draw.");
 }
 
 
 if(avgScoreMary > avgScoreJohn) {
-    console.log("Mary has a higher average score than John.");
+    console.log("Mary has a higher average score than John with " + avgScoreMary + ".");
 }
-else{
-    console.log("John has a higher average score than Mary.");
+else if (avgScoreMary < avgScoreJohn){
+    console.log("John has a higher average score than Mary with " + avgScoreJohn + ".");
+}
+else if (avgScoreMary == avgScoreJohn) {
+    console.log("Draw.");
 }
