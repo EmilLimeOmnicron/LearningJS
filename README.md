@@ -12,3 +12,8 @@ Coding Challenge 2 - 12/30/2018
 
 
 ![js code challenge 2 output](https://user-images.githubusercontent.com/7680427/50554417-d8845d80-0c6e-11e9-9a7b-55a2e9c3e3ee.png)
+
+Coding Challenge 2 - 1/18/2019
+
+
+![js code challenge 3 output](https://user-images.githubusercontent.com/7680427/51377029-aa9c7700-1abe-11e9-851a-18b6abd2d49d.png)
