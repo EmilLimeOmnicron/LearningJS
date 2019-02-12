@@ -2,29 +2,68 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+//https://reactjs.org/tutorial/tutorial.html
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+
 
 //"npm start" in terminal without quotes
+
+
+//board handles status
+/*
+In React, function components are a simpler way to write 
+components that only contain a render method and don’t have 
+their own state. Instead of defining a class which extends
+React.Component, we can write a function that takes props as input
+and returns what should be rendered. Function components are less tedious 
+to write than classes, and many components can be expressed this way.
+
+old
 class Square extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: null,
-    };
-  }
-  
-  
   render() {
       return (
-        <button className="square" onClick={() => 
-        this.setState({value: 'X'})}>
-          {this.state.value}
+        <button className="square" 
+        onClick={() => 
+        this.props.onClick({value: 'X'})}>
+          {this.props.value}
         </button>
       );
     }
   }
-  
-  class Board extends React.Component {renderSquare(i) {
-      return <Square value={i} />;
+  */
+
+   //new
+  function Square(props) {
+    return (
+      <button className="square" 
+      onClick={props.onClick}>
+        {props.value}
+      </button>
+    );
+  }
+
+  class Board extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        squares: Array(9).fill(null),
+      };
+    }
+
+    handleClick(i) {
+      const squares = this.state.squares.slice();
+      squares[i] = 'X';
+      this.setState({squares: squares});
+    }
+
+    renderSquare(i) {
+      return (
+        <Square
+         value={this.state.squares[i]} 
+      onClick = {() => this.handleClick(i)}
+      />
+      );
     }
   
     render() {
